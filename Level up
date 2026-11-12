@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+
+struct Gracz
+{
+    std::string nick;
+    int poziom;
+    int punkty;
+};
+
+int main()
+{
+    Gracz gracz1;
+
+    Gracz* wsk = &gracz1;
+    wsk ->  nick = "Player123";
+    wsk ->  poziom = 15;
+    wsk -> punkty = 100;
+    wsk->punkty = wsk->punkty + 50;
+    wsk -> poziom = 20;
+    wsk -> poziom++;
+    std::cout <<"Nick: " << wsk->nick << std::endl;
+    std::cout <<"Poziom: "<< wsk->poziom << std::endl;
+    std::cout <<"Zdpbyte punkty: " << wsk ->punkty <<std::endl;
+    std::cout <<"Level up! " << wsk -> poziom <<std::endl;
+
+    return 0;
+}
